@@ -1,0 +1,24 @@
+<div style="border-style: solid; border-width: 7px">
+    
+    <div style= "text-align: center;">
+        <span style="font-size:35px;float:left; font-weight: bold; color: red; text-decoration: underline;"><%= @name[0] %></span>
+        <span style="font-size:35px;float:center; font-style: italic; color: black;text-decoration: underline;"><%= @name[1] %></span>
+        <span style="font-size:35px; font-family: 궁서; float:right; color:blue;text-decoration: underline;"><%= @name[2] %></span>
+    </div>
+    <div style="text-align:center;">
+        <span style="float:right;margin: 5px 10px 20px 20px;">
+            <%  array = Array(0..4)
+                @random_no = array.sample(3).sort()
+                @random_image = @images[@random_no[0]]%>
+            <img src="/assets/<%= @random_image%>" width="200px" height="300px">
+        </span>
+        <span style="float:center;margin: 5px 10px 20px 2 0px;">
+            <% @random_image = @images[@random_no[1]] %>
+            <img src="/assets/<%= @random_image%>" width="200px" height="300px">
+        </span>
+        <span style="float:left;margin: 5px 10px 20px 20px">
+            <% @random_image = @images[@random_no[2]]%>
+            <img src="/assets/<%= @random_image%>" width="200px" height="300px">
+        </span>
+    </div>
+</div>
